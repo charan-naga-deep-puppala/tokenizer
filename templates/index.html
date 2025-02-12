@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simple BPE Tokenizer</title>
+</head>
+<body>
+    <h1>Simple BPE Tokenizer Demo</h1>
+
+    <!-- 1) Train Tokenizer -->
+    <h2>Train Tokenizer</h2>
+    <form action="/train" method="POST">
+        <p>Enter text to build merges/vocab:</p>
+        <textarea name="train_text" rows="5" cols="60"></textarea><br><br>
+        <button type="submit">Train</button>
+    </form>
+    
+    <hr>
+
+    <!-- 2) Encode User Text -->
+    <h2>Encode Text</h2>
+    <form action="/encode" method="POST">
+        <p>Enter text to encode:</p>
+        <textarea name="text_to_encode" rows="3" cols="60"></textarea><br><br>
+        <button type="submit">Encode</button>
+    </form>
+
+    <hr>
+
+    <!-- 3) Decode Token IDs -->
+    <h2>Decode Token IDs</h2>
+    <p>Enter a Python-style list of token IDs, e.g. <code>[256, 99, 100]</code></p>
+    <form action="/decode" method="POST">
+        <textarea name="text_to_decode" rows="3" cols="60"></textarea><br><br>
+        <button type="submit">Decode</button>
+    </form>
+
+</body>
+</html>
